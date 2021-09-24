@@ -1,6 +1,6 @@
 # Example VPC to support Blue/Green Deployment
 
-This Terraform example for IBM Cloud Schematics illustrates how to deploy an IBM Cloud Gen2 VPC infrastructure to support Blue/Green Deployments of applications to set of Virtual Machines (VSI) running within the VPC. The two environments blue/green are provisioned as seperate subnets to provide network isolation between the two environments. The VSI's running within the Blue and Green subnet are grouped using Instance Groups that provides ease of maintaining instances in the group while also providing support for scaling. Inaddition, the template also creates a bastion host to provide secure remote SSH access to the Virtual Machines within VPC. The example and Terraform modules are supplied 'as is' and only seek to implement a 'reasonable' set of best practices for rolling deployment configuration. Your own organisation may have additional requirements that may need be implemented before it can be used.
+This Terraform example for IBM Cloud Schematics illustrates how to deploy an IBM Cloud Gen2 VPC infrastructure to support Blue/Green Deployments of applications to set of Virtual Machines (VSI) running within the VPC. The two environments blue/green are provisioned as seperate subnets to provide network isolation between the two environments. The VSI's running within the Blue and Green subnet are grouped using Instance Groups that provides ease of maintaining instances in the group while also providing support for scaling. In addition, the template also creates a bastion host to provide secure remote SSH access to the Virtual Machines within VPC. The example and Terraform modules are supplied 'as is' and only seek to implement a 'reasonable' set of best practices for rolling deployment configuration. Your own organisation may have additional requirements that may need be implemented before it can be used.
 
 ## Blue/Green Deployment
 
@@ -131,7 +131,7 @@ The following resources are deployed by this template and may incur charges.
         - Click Create a workspace.
         - Enter a name for your workspace.
         - Click Create to create your workspace.
-    2.  On the workspace **Settings** page, enter the URL of this example in the Schematics examples Github repository.
+    2.  On the workspace **Settings** page, enter the URL of this example in the Schematics examples GitHub repository.
         - Select the Terraform version: Terraform 0.12.
         - Click **Save template information**.
         - In the **Input variables** section, review the default input variables and provide alternatives if desired. The only mandatory parameter is the name given to the SSH key that you uploaded to your IBM Cloud account.
