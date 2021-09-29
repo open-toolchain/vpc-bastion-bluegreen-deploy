@@ -35,7 +35,7 @@ variable "resource_group_name" {
 # unique name for the VPC in the account 
 variable "vpc_name" {
   description = "Name of vpc"
-  default     = "vsi-deployment"
+  default     = "vpc-bg"
 }
 
 ##############################################################################
@@ -106,7 +106,7 @@ data "ibm_is_image" "os" {
 ##############################################################################
 
 variable "ssh_private_key" {
-  description = "SSH private key of SSH key pair used for VSIs and Bastion"
+  description = "SSH private key of SSH key pair used for VSIs and Bastion. SSH command to create the key: 'ssh-keygen -t rsa -b 4096 -C cloud.ibm.com'"
 }
 
 data "ibm_is_ssh_key" "sshkey" {
@@ -114,6 +114,5 @@ data "ibm_is_ssh_key" "sshkey" {
 }
 
 variable "ssh_key_name" {
-  description = "Name giving to public SSH key uploaded to IBM Cloud for VSI access"
+  description = "Name giving to public SSH key uploaded to IBM Cloud for VSI access. To create SSH key use : https://cloud.ibm.com/docs/vpc?topic=vpc-ssh-keys#locating-ssh-keys. To add SSH refer: https://cloud.ibm.com/docs/ssh-keys?topic=ssh-keys-adding-an-ssh-key"
 }
-
